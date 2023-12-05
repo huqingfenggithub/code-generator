@@ -1,7 +1,7 @@
 package io.github.jzdayz.controller;
 
+import io.github.jzdayz.Result;
 import io.github.jzdayz.ex.TableNotFoundException;
-import io.github.jzdayz.rs.R;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.BindException;
 import org.springframework.validation.FieldError;
@@ -17,20 +17,20 @@ import java.util.Map;
 public class ExController {
 
     @ExceptionHandler(TableNotFoundException.class)
-    public R<?> tableNotFoundException() {
-        return R.error("表不存在！");
+    public Result<?> tableNotFoundException() {
+        return Result.error("表不存在！");
     }
 
     @ExceptionHandler(Exception.class)
-    public R<?> ex(Exception e) {
+    public Result<?> ex(Exception e) {
         log.error(e.getMessage(), e);
-        return R.error(e.getMessage());
+        return Result.error(e.getMessage());
     }
 
     @ExceptionHandler(value = {BindException.class})
     @ResponseBody
-    public R<?> bindException(BindException ex) {
-        R<Object> error = R.error("");
+    public Result<?> bindException(BindException ex) {
+        Result<Object> error = Result.error("");
         Map<String, String> data = new HashMap<>();
         for (FieldError fieldError : ex.getFieldErrors()) {
             data.put(fieldError.getField(), fieldError.getDefaultMessage());

@@ -1,7 +1,7 @@
 package io.github.jzdayz.mapper;
 
-import io.github.jzdayz.entity.CodeGeneratorEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import io.github.jzdayz.CodeGeneratorEntity;
 
 /**
  * <p>

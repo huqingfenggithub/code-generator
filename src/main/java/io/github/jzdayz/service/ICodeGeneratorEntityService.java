@@ -1,7 +1,7 @@
 package io.github.jzdayz.service;
 
-import io.github.jzdayz.entity.CodeGeneratorEntity;
 import com.baomidou.mybatisplus.extension.service.IService;
+import io.github.jzdayz.CodeGeneratorEntity;
 
 /**
  * <p>

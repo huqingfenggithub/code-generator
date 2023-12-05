@@ -1,4 +1,4 @@
-package io.github.jzdayz.config;
+package io.github.jzdayz;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.reactive.config.CorsRegistry;

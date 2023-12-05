@@ -2,18 +2,15 @@ package io.github.jzdayz.controller;
 
 import cn.hutool.core.bean.copier.BeanCopier;
 import cn.hutool.core.bean.copier.CopyOptions;
-import io.github.jzdayz.entity.CodeGeneratorEntity;
-import io.github.jzdayz.logic.service.GeneratorCommon;
-import io.github.jzdayz.logic.service.MbpGenerator;
-import io.github.jzdayz.rs.R;
+import io.github.jzdayz.CodeGeneratorEntity;
+import io.github.jzdayz.GeneratorCommon;
+import io.github.jzdayz.Result;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Controller;
-import org.springframework.validation.BeanPropertyBindingResult;
 import org.springframework.validation.BindException;
-import org.springframework.validation.DirectFieldBindingResult;
 import org.springframework.validation.Validator;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -34,8 +31,8 @@ public class MybatisPlusCodeGeneratorController {
 
     @ResponseBody
     @GetMapping("init-info")
-    public R<?> initInfo() {
-        return R.success(generatorCommon.list());
+    public Result<?> initInfo() {
+        return Result.success(generatorCommon.list());
     }
 
     @GetMapping("generator")

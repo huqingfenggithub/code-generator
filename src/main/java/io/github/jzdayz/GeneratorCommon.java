@@ -1,6 +1,5 @@
-package io.github.jzdayz.logic.service;
+package io.github.jzdayz;
 
-import io.github.jzdayz.entity.CodeGeneratorEntity;
 import io.github.jzdayz.ex.NotSupportException;
 import io.github.jzdayz.service.ICodeGeneratorEntityService;
 import lombok.AllArgsConstructor;

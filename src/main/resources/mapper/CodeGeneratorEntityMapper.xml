@@ -3,7 +3,7 @@
 <mapper namespace="io.github.jzdayz.mapper.CodeGeneratorEntityMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="io.github.jzdayz.entity.CodeGeneratorEntity">
+    <resultMap id="BaseResultMap" type="io.github.jzdayz.CodeGeneratorEntity">
         <id column="ID" property="id" />
         <result column="JDBC" property="jdbc" />
         <result column="ALIAS" property="alias" />

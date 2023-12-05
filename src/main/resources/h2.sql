@@ -3,7 +3,7 @@ create table if not exists code_generator_entity
     id              int primary key auto_increment,
     jdbc            varchar(255),
     alias            varchar(255),
-    user            varchar(255),
+    user_name            varchar(255),
     pwd            varchar(255),
     schema          varchar(255),
     table_string       varchar(255),

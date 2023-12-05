@@ -1,10 +1,10 @@
 package io.github.jzdayz.service.impl;
 
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
-import io.github.jzdayz.entity.CodeGeneratorEntity;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import io.github.jzdayz.CodeGeneratorEntity;
 import io.github.jzdayz.mapper.CodeGeneratorEntityMapper;
 import io.github.jzdayz.service.ICodeGeneratorEntityService;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
 /**
@@ -21,9 +21,9 @@ public class CodeGeneratorEntityServiceImpl extends ServiceImpl<CodeGeneratorEnt
     @Override
     public void saveOrUpdateByAlias(CodeGeneratorEntity entity) {
         String alias = entity.getAlias();
-        boolean exists = baseMapper.selectList(
+        boolean exists = !baseMapper.selectList(
                 Wrappers.<CodeGeneratorEntity>lambdaQuery().eq(CodeGeneratorEntity::getAlias, alias)
-        ).size() > 0;
+        ).isEmpty();
         if (exists) {
             baseMapper.update(entity, Wrappers.<CodeGeneratorEntity>lambdaUpdate().eq(CodeGeneratorEntity::getAlias, alias));
         } else {
