@@ -1,4 +1,4 @@
-package io.github.jzdayz;
+package io.github.jzdayz.db.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

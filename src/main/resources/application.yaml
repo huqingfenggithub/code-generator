@@ -6,3 +6,7 @@ spring:
     init:
       schema-locations: classpath*:h2.sql
       mode: always
+  h2:
+    console:
+      enabled: true
+

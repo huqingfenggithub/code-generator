@@ -1,14 +1,16 @@
 package io.github.jzdayz;
 
-import cn.hutool.system.SystemUtil;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import java.net.ServerSocket;
 
 @SpringBootApplication
-@MapperScan("io.github.jzdayz.mapper")
+@MapperScan("io.github.jzdayz.db.mapper")
 public class App {
 
     static {
@@ -22,6 +24,16 @@ public class App {
                 // ignore
             }
         }
+    }
+
+    @Configuration
+    public static class WebConfig implements WebMvcConfigurer {
+
+        @Override
+        public void addCorsMappings(CorsRegistry registry) {
+            registry.addMapping("/**").allowedMethods("*").allowedHeaders("*").allowedOriginPatterns("*").allowCredentials(true);
+        }
+
     }
 
     public static void main(String[] args) {

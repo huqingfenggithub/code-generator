@@ -1,18 +1,17 @@
-package io.github.jzdayz;
+package io.github.jzdayz.util;
 
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.util.IdUtil;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.core.util.ZipUtil;
 import cn.hutool.system.SystemUtil;
-import com.baomidou.mybatisplus.core.toolkit.StringPool;
-import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.generator.FastAutoGenerator;
 import com.baomidou.mybatisplus.generator.config.*;
 import com.baomidou.mybatisplus.generator.config.builder.Entity;
 import com.baomidou.mybatisplus.generator.config.po.LikeTable;
 import com.baomidou.mybatisplus.generator.config.po.TableInfo;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
+import io.github.jzdayz.db.entity.CodeGeneratorEntity;
 import io.github.jzdayz.ex.TableNotFoundException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.io.FileSystemResource;

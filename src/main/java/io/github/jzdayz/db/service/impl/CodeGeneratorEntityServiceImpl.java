@@ -1,10 +1,10 @@
-package io.github.jzdayz.service.impl;
+package io.github.jzdayz.db.service.impl;
 
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import io.github.jzdayz.CodeGeneratorEntity;
-import io.github.jzdayz.mapper.CodeGeneratorEntityMapper;
-import io.github.jzdayz.service.ICodeGeneratorEntityService;
+import io.github.jzdayz.db.entity.CodeGeneratorEntity;
+import io.github.jzdayz.db.mapper.CodeGeneratorEntityMapper;
+import io.github.jzdayz.db.service.ICodeGeneratorEntityService;
 import org.springframework.stereotype.Service;
 
 /**

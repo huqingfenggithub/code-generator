@@ -1,4 +1,4 @@
-package io.github.jzdayz;
+package io.github.jzdayz.db.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -38,20 +38,16 @@ public class CodeGeneratorEntity implements Serializable {
 
     private String pwd;
 
-    @TableField("TABLE_STRING")
     private String tableString;
 
-    @TableField("TF_TYPE")
     private String tfType;
 
-    @TableField("MBP_PACKAGE")
     private String mbpPackage;
 
     private Boolean swagger;
 
     private Boolean lombok;
 
-    @TableField("TABLE_NAME_FORMAT")
     private String tableNameFormat;
 
 

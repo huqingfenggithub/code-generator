@@ -1,7 +1,8 @@
-package io.github.jzdayz;
+package io.github.jzdayz.util;
 
+import io.github.jzdayz.db.entity.CodeGeneratorEntity;
 import io.github.jzdayz.ex.NotSupportException;
-import io.github.jzdayz.service.ICodeGeneratorEntityService;
+import io.github.jzdayz.db.service.ICodeGeneratorEntityService;
 import lombok.AllArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.core.io.Resource;

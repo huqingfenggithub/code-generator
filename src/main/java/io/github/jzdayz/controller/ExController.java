@@ -1,6 +1,6 @@
 package io.github.jzdayz.controller;
 
-import io.github.jzdayz.Result;
+import io.github.jzdayz.db.entity.Result;
 import io.github.jzdayz.ex.TableNotFoundException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.BindException;
