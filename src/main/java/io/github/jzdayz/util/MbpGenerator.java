@@ -60,7 +60,7 @@ public class MbpGenerator {
                 .packageConfig((scanner, builder) ->
                         builder
                                 .parent(codeGeneratorEntity.getMbpPackage())
-                                .pathInfo(Collections.singletonMap(OutputFile.xml, path + File.separator + codeGeneratorEntity.getMbpPackage().replace(".", "/") + File.separator + "xml"))
+                                .pathInfo(Collections.singletonMap(OutputFile.xml, path + File.separator + "xml"))
                 )
                 .dataSourceConfig(builder -> {
                     if (StrUtil.isNotBlank(codeGeneratorEntity.getSchema())) {
